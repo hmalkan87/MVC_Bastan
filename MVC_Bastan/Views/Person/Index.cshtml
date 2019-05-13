@@ -1,0 +1,33 @@
+﻿@model MVC_Bastan.Models.PersonModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        @Html.DisplayFor(m => m.Name)<br />
+        @Html.DisplayFor(m => m.BirthDate)<br />
+        <hr />
+        <ul class="list-group">
+            @foreach (string item in Model.GsmNumberList)
+            {
+                <li>@item</li>
+                
+            }
+        </ul>
+            <hr />
+            @foreach (string item in Model.AddressList)
+            {
+                @item
+                <br />
+            }
+</div>
+</body>
+</html>
